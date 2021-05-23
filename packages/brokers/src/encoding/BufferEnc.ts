@@ -6,7 +6,9 @@
 import { Buffer } from "https://deno.land/std@0.97.0/node/buffer.ts";
 
 /**
- * @since 0.4.1
+ * Encodes any passed data into a Buffer.
+ * @param data The data to be encoded into a Buffer.
+ * @since 0.0.1
  * @internal
  */
 // deno-lint-ignore no-explicit-any
@@ -16,7 +18,9 @@ export function encode(data: any): Buffer {
 }
 
 /**
- * @since 0.4.1
+ * Decodes buffer encoded data.
+ * @param data The data to decode.
+ * @since 0.0.1
  * @internal
  */
 // deno-lint-ignore no-explicit-any

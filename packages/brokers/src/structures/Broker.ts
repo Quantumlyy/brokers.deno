@@ -24,6 +24,11 @@ export interface ResponseOptions<T = unknown> {
   reply: (data: T) => void;
 }
 
+/**
+ * The base Broker abstraction used in integration modules
+ * @abstract
+ * @class
+ */
 export abstract class Broker<
   Send,
   Receive,

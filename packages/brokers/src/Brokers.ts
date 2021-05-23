@@ -1,6 +1,10 @@
 import { EventEmitter } from "https://deno.land/std@0.97.0/node/events.ts";
 import { Broker } from "./structures/Broker.ts";
 
+/**
+ * The holder class for brokers.
+ * @class
+ */
 // deno-lint-ignore no-explicit-any
 export class Brokers<B extends Broker<any, any> = Broker<any, any>>
   extends EventEmitter {
@@ -14,6 +18,11 @@ export class Brokers<B extends Broker<any, any> = Broker<any, any>>
     this.broker.__init(this);
   }
 
+  /**
+   * Runs the start method of the held broker.
+   * @param args The args to pass to the underlying broker.
+   * @returns Passes the internal return value of the held brokers start method.
+   */
   public start<T = ReturnType<B["start"]>>(...args: Parameters<B["start"]>): T {
     return this.broker.start(...args);
   }
